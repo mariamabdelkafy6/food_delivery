@@ -31,8 +31,8 @@ class _LogoScreenState extends State<LogoScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/images/Logo.png',
+            Image.network(
+              'https://i.postimg.cc/Jn1Qn8H1/Logo.png',
               height: 139,
               width: 175,
             ),
@@ -45,7 +45,7 @@ class _LogoScreenState extends State<LogoScreen> {
                 ),
               ),
             ),
-            Text('Deliver Favourite Food   ',
+            Text('Deliver Favorite Food   ',
                 style: GoogleFonts.inter(
                   textStyle: TextStyle(
                     color: Color(0xff09051C),
