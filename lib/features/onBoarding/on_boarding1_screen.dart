@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/features/onBoarding/on_boarding2_screen.dart';
 
 class OnBoarding1Screen extends StatelessWidget {
   const OnBoarding1Screen({super.key});
@@ -35,19 +36,27 @@ class OnBoarding1Screen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 42),
-            Container(
-              height: 57,
-              width: 157,
-              decoration: BoxDecoration(
-                color: Color(0xff15BE77),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(15),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => OnBoarding2Screen()),
+                );
+              },
+              child: Container(
+                height: 57,
+                width: 157,
+                decoration: BoxDecoration(
+                  color: Color(0xff15BE77),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15),
+                  ),
                 ),
-              ),
-              child: Center(
-                child: Text(
-                  'Next',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                child: Center(
+                  child: Text(
+                    'Next',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
                 ),
               ),
             ),
