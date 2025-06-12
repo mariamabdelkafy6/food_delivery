@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/features/onBoarding/logo_screen.dart';
+import 'package:food_delivery/screens/onBoarding/logo_screen.dart';
 
 void main() {
   runApp(const MyApp());
