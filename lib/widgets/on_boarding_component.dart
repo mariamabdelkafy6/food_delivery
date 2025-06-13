@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingComponent extends StatelessWidget {
   const OnBoardingComponent(
@@ -21,29 +22,29 @@ class OnBoardingComponent extends StatelessWidget {
           children: [
             Image.network(
               image,
-              height: 430,
-              width: 408,
+              height: 430.h,
+              width: 408.w,
             ),
             Text(
               text,
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Color(0xff09051C),
-                fontSize: 22,
+                fontSize: 22.sp,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             Text(
               desc,
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Color(0xff09051C),
-                fontSize: 12,
+                fontSize: 12.sp,
                 fontWeight: FontWeight.w400,
               ),
             ),
-            SizedBox(height: 42),
+            SizedBox(height: 42.h),
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -52,18 +53,18 @@ class OnBoardingComponent extends StatelessWidget {
                 );
               },
               child: Container(
-                height: 57,
-                width: 157,
+                height: 57.h,
+                width: 157.w,
                 decoration: BoxDecoration(
                   color: Color(0xff15BE77),
                   borderRadius: BorderRadius.all(
-                    Radius.circular(15),
+                    Radius.circular(15.sp),
                   ),
                 ),
                 child: Center(
                   child: Text(
                     'Next',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: TextStyle(color: Colors.white, fontSize: 16.sp),
                   ),
                 ),
               ),
