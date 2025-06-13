@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LinkContainer extends StatelessWidget {
   const LinkContainer({super.key, required this.title, required this.image});
@@ -8,10 +9,10 @@ class LinkContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 152,
-      height: 57,
+      width: 152.w,
+      height: 57.h,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(15.sp),
         border: Border.all(color: Colors.grey),
       ),
       child: Padding(
@@ -23,14 +24,14 @@ class LinkContainer extends StatelessWidget {
           children: [
             Image.network(
               image,
-              height: 25,
-              width: 25,
+              height: 25.h,
+              width: 25.w,
             ),
-            SizedBox(width: 13),
+            SizedBox(width: 13.w),
             Text(
               title,
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 14.sp,
                 fontWeight: FontWeight.bold,
               ),
             )

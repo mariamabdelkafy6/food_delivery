@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextFieldComponent extends StatelessWidget {
   const TextFieldComponent(
@@ -28,7 +29,10 @@ class TextFieldComponent extends StatelessWidget {
         suffixIcon: Icon(visibilityIcon),
         filled: true,
         fillColor: Colors.white,
-        contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 20),
+        contentPadding: EdgeInsetsDirectional.symmetric(
+          vertical: 16,
+          horizontal: 20,
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
         ),
@@ -38,10 +42,13 @@ class TextFieldComponent extends StatelessWidget {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.grey, width: 2),
+          borderSide: BorderSide(
+            color: Colors.grey,
+            width: 2.w,
+          ),
         ),
       ),
-      style: TextStyle(fontSize: 14),
+      style: TextStyle(fontSize: 14.sp),
     );
   }
 }

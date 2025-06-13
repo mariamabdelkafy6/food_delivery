@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LogoComponent extends StatefulWidget {
@@ -17,15 +18,15 @@ class _LogoScreenState extends State<LogoComponent> {
       children: [
         Image.network(
           'https://i.postimg.cc/Jn1Qn8H1/Logo.png',
-          height: 139,
-          width: 175,
+          height: 139.h,
+          width: 175.w,
         ),
         Text(
           'FoodNinja',
           style: GoogleFonts.viga(
             textStyle: TextStyle(
               color: Color(0xff15BE77),
-              fontSize: 40,
+              fontSize: 40.sp,
             ),
           ),
         ),
@@ -33,7 +34,7 @@ class _LogoScreenState extends State<LogoComponent> {
             style: GoogleFonts.inter(
               textStyle: TextStyle(
                 color: Color(0xff09051C),
-                fontSize: 13,
+                fontSize: 13.sp,
                 fontWeight: FontWeight.w600,
               ),
             ))

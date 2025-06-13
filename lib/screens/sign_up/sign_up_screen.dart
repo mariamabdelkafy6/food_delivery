@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery/screens/log_in/log_in_screen.dart';
 import 'package:food_delivery/screens/sign_up/widgets/check_icon.dart';
 import 'package:food_delivery/screens/sign_up/widgets/text_field_component.dart';
@@ -21,87 +22,87 @@ class SignUpScreen extends StatelessWidget {
               children: [
                 Image.network(
                   'https://i.postimg.cc/Jn1Qn8H1/Logo.png',
-                  height: 139,
-                  width: 175,
+                  height: 139.h,
+                  width: 175.w,
                 ),
                 Text(
                   'FoodNinja',
                   style: GoogleFonts.viga(
                     textStyle: TextStyle(
                       color: Color(0xff15BE77),
-                      fontSize: 40,
+                      fontSize: 40.sp,
                     ),
                   ),
                 ),
                 Text(
                   'Deliever Favorite Food',
                   style: TextStyle(
-                    fontSize: 13,
+                    fontSize: 13.sp,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                SizedBox(height: 65),
+                SizedBox(height: 65.h),
                 Text(
                   'Sign Up For Free',
                   style: TextStyle(
                     color: Color(0xff09051C),
                     fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                    fontSize: 20.sp,
                   ),
                 ),
-                SizedBox(height: 40),
+                SizedBox(height: 40.h),
                 TextFieldComponent(
                   title: 'Anamwp . . |',
                   desc: 'Enter your name',
                   icon: Icons.person,
                 ),
-                SizedBox(height: 12),
+                SizedBox(height: 12.h),
                 TextFieldComponent(
                   title: 'Email',
                   desc: 'Enter your email',
                   icon: Icons.email,
                 ),
-                SizedBox(height: 12),
+                SizedBox(height: 12.h),
                 TextFieldComponent(
                   title: 'Password',
                   desc: 'Enter your password',
                   icon: Icons.password,
                   visibilityIcon: Icons.visibility_outlined,
                 ),
-                SizedBox(height: 19),
+                SizedBox(height: 19.h),
                 Row(
                   children: [
                     CheckIcon(),
-                    SizedBox(width: 8),
+                    SizedBox(width: 8.w),
                     Text(
                       'Keep Me Signed In',
                       style: TextStyle(
                         color: Color(0x80000000),
-                        fontSize: 12,
+                        fontSize: 12.sp,
                       ),
                     )
                   ],
                 ),
-                SizedBox(height: 12),
+                SizedBox(height: 12.h),
                 Row(
                   children: [
                     CheckIcon(),
-                    SizedBox(width: 8),
+                    SizedBox(width: 8.w),
                     Text(
                       'Email Me About Special Pricing',
                       style: TextStyle(
                         color: Color(0x80000000),
-                        fontSize: 12,
+                        fontSize: 12.sp,
                       ),
                     )
                   ],
                 ),
-                SizedBox(height: 43),
+                SizedBox(height: 43.h),
                 Container(
-                  width: 175,
-                  height: 57,
+                  width: 175.w,
+                  height: 57.h,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(15.sp),
                     color: Color(0xff15BE77),
                   ),
                   child: Center(
@@ -118,7 +119,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -132,14 +133,14 @@ class SignUpScreen extends StatelessWidget {
                     'already have an account?',
                     style: TextStyle(
                       color: Color(0xff15BE77),
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       decoration: TextDecoration.underline,
                       decorationColor: Color(0xff15BE77),
-                      decorationThickness: 0.5,
+                      decorationThickness: 0.5.sp,
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 20.h),
               ],
             ),
           ),
