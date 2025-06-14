@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_delivery/screens/upload_preview/upload_preview_screen.dart';
 import 'package:food_delivery/widgets/button.dart';
 import 'package:food_delivery/widgets/left_icon.dart';
 
@@ -30,7 +31,11 @@ class UploadPhotoScreen extends StatelessWidget {
                 title: 'Take Photo',
               ),
               SizedBox(height: 165.h),
-              Center(child: Button(title: 'Next')),
+              Center(
+                  child: Button(
+                title: 'Next',
+                returnScreen: UploadPreviewScreen(),
+              )),
             ],
           ),
         ),
