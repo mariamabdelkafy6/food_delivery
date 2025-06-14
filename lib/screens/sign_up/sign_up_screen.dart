@@ -106,16 +106,9 @@ class SignUpScreen extends StatelessWidget {
                     color: Color(0xff15BE77),
                   ),
                   child: Center(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SignUpProcessScreen(),
-                          ),
-                        );
-                      },
-                      child: Button(title: 'Create Account'),
+                    child: Button(
+                      title: 'Create Account',
+                      returnScreen: SignUpProcessScreen(),
                     ),
                   ),
                 ),

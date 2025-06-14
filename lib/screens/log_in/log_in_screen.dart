@@ -54,7 +54,7 @@ class LogInScreen extends StatelessWidget {
                       title: 'Facebook',
                       image: 'https://i.postimg.cc/7hb0kKSj/facebook.png',
                     ),
-                    SizedBox(width: 21.w),
+                    SizedBox(width: 17.w),
                     LinkContainer(
                       title: 'Google',
                       image: 'https://i.postimg.cc/k59jmdGZ/google-icon-1.png',
@@ -73,7 +73,7 @@ class LogInScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 36.h),
-                Button(title: 'Login'),
+                Button(title: 'Login', returnScreen: null,),
                 SizedBox(height: 36.h),
               ],
             ),

@@ -21,6 +21,7 @@ class LinkContainer extends StatelessWidget {
           vertical: 16,
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.network(
               image,
