@@ -50,7 +50,6 @@ class UploadPhotoScreen extends StatelessWidget {
 
 class _KindOfUploadPhoto extends StatelessWidget {
   const _KindOfUploadPhoto({
-    super.key,
     required this.image,
     required this.title,
   });
