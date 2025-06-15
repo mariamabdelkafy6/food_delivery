@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_delivery/screens/forgot_password/forgot_password_screen.dart';
 import 'package:food_delivery/screens/log_in/widgets/link_container.dart';
 import 'package:food_delivery/widgets/button.dart';
 import 'package:food_delivery/widgets/logo_component.dart';
@@ -62,18 +63,31 @@ class LogInScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20.h),
-                Text(
-                  'Forgot Your Password?',
-                  style: TextStyle(
-                    color: Color(0xff15BE77),
-                    fontSize: 12.sp,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Color(0xff15BE77),
-                    decorationThickness: 0.5.sp,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ForgotPasswordScreen(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'Forgot Your Password?',
+                    style: TextStyle(
+                      color: Color(0xff15BE77),
+                      fontSize: 12.sp,
+                      decoration: TextDecoration.underline,
+                      decorationColor: Color(0xff15BE77),
+                      decorationThickness: 0.5.sp,
+                    ),
                   ),
                 ),
                 SizedBox(height: 36.h),
-                Button(title: 'Login', returnScreen: null,),
+                Button(
+                  title: 'Login',
+                  returnScreen: null,
+                ),
                 SizedBox(height: 36.h),
               ],
             ),
