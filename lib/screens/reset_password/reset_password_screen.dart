@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_delivery/screens/success_notification/success_notification_screen.dart';
 import 'package:food_delivery/widgets/button.dart';
 import 'package:food_delivery/widgets/left_icon.dart';
 import 'package:food_delivery/widgets/simple_text_field.dart';
@@ -35,7 +36,11 @@ class ResetPasswordScreen extends StatelessWidget {
                 title: 'Confirm Password',
               ),
               SizedBox(height: 290.h),
-              Center(child: Button(title: 'Next')),
+              Center(
+                  child: Button(
+                title: 'Next',
+                returnScreen: SuccessNotificationScreen(),
+              )),
             ],
           ),
         ),
