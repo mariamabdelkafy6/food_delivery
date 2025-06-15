@@ -22,6 +22,8 @@ class SignUpProcessScreen extends StatelessWidget {
               SizedBox(height: 20.h),
               LeftIcon(
                 title: 'Fill in your bio to get\nstarted',
+                desc:
+                    'This data will be displayed in your account\n profile for security',
               ),
               SimpleTextField(
                 desc: 'Enter Your First Name',

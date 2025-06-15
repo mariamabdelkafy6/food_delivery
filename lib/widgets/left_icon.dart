@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LeftIcon extends StatelessWidget {
-  const LeftIcon({super.key, required this.title});
+  const LeftIcon({super.key, required this.title, required this.desc});
   final String title;
+  final String desc;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class LeftIcon extends StatelessWidget {
         ),
         SizedBox(height: 19.h),
         Text(
-          'This data will be displayed in your account\n profile for security',
+          desc,
           style: TextStyle(
             fontSize: 12.sp,
           ),

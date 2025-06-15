@@ -21,6 +21,8 @@ class UploadPreviewScreen extends StatelessWidget {
             children: [
               LeftIcon(
                 title: 'Upload Your Photo\nProfile',
+                desc:
+                    'This data will be displayed in your account\n profile for security',
               ),
               SizedBox(height: 59.h),
               Center(

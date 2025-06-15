@@ -19,7 +19,11 @@ class UploadPhotoScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              LeftIcon(title: 'Upload Your Photo\nProfile'),
+              LeftIcon(
+                title: 'Upload Your Photo\nProfile',
+                desc:
+                    'This data will be displayed in your account\n profile for security',
+              ),
               SizedBox(height: 20.h),
               _KindOfUploadPhoto(
                 image: 'https://i.postimg.cc/13vpnKMm/Gallery.png',

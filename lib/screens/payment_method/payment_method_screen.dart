@@ -19,7 +19,11 @@ class PaymentMethodScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              LeftIcon(title: 'Payment Method'),
+              LeftIcon(
+                title: 'Payment Method',
+                desc:
+                    'This data will be displayed in your account\n profile for security',
+              ),
               SizedBox(height: 20.h),
               _KindOfPayment(
                   image: 'https://i.postimg.cc/VLBv5L4m/paypal-2-1-1.png'),

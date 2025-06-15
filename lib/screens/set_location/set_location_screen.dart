@@ -19,7 +19,11 @@ class SetLocationScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              LeftIcon(title: 'Set Your Location '),
+              LeftIcon(
+                title: 'Set Your Location ',
+                desc:
+                    'This data will be displayed in your account\n profile for security',
+              ),
               Container(
                 width: 342.w,
                 height: 147.h,
