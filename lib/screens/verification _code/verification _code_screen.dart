@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_delivery/screens/reset_password/reset_password_screen.dart';
 import 'package:food_delivery/widgets/button.dart';
 import 'package:food_delivery/widgets/left_icon.dart';
 import 'package:food_delivery/widgets/simple_text_field.dart';
@@ -30,7 +31,12 @@ class VerificationCodeScreen extends StatelessWidget {
                 title: 'Enter',
               ),
               SizedBox(height: 322.h),
-              Center(child: Button(title: 'Next')),
+              Center(
+                child: Button(
+                  title: 'Next',
+                  returnScreen: ResetPasswordScreen(),
+                ),
+              ),
             ],
           ),
         ),
