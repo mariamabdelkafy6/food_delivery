@@ -73,29 +73,32 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
               label: '',
             ),
             NavigationDestination(
-              selectedIcon: Container(
-                padding: EdgeInsetsDirectional.all(10),
-                decoration: BoxDecoration(
-                  color: Color(0x2015BE77),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                width: 105.w,
-                height: 44.h,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.person,
-                      color: Color(0xff15BE77),
-                    ),
-                    SizedBox(width: 12.w),
-                    Text(
-                      'Profile',
-                      style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w600,
+              selectedIcon: Padding(
+                padding: const EdgeInsetsDirectional.only(top: 15),
+                child: Container(
+                  padding: EdgeInsetsDirectional.all(10),
+                  decoration: BoxDecoration(
+                    color: Color(0x2015BE77),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  width: 105.w,
+                  height: 44.h,
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.person,
+                        color: Color(0xff15BE77),
                       ),
-                    )
-                  ],
+                      SizedBox(width: 12.w),
+                      Text(
+                        'Profile',
+                        style: TextStyle(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
               icon: Icon(
@@ -105,29 +108,32 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
               label: '',
             ),
             NavigationDestination(
-              selectedIcon: Container(
-                padding: EdgeInsetsDirectional.all(10),
-                decoration: BoxDecoration(
-                  color: Color(0x2015BE77),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                width: 105.w,
-                height: 44.h,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.shopping_cart,
-                      color: Color(0xff15BE77),
-                    ),
-                    SizedBox(width: 12.w),
-                    Text(
-                      'Cart',
-                      style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w600,
+              selectedIcon: Padding(
+                padding: const EdgeInsetsDirectional.only(top: 15),
+                child: Container(
+                  padding: EdgeInsetsDirectional.all(10),
+                  decoration: BoxDecoration(
+                    color: Color(0x2015BE77),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  width: 105.w,
+                  height: 44.h,
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.shopping_cart,
+                        color: Color(0xff15BE77),
                       ),
-                    )
-                  ],
+                      SizedBox(width: 12.w),
+                      Text(
+                        'Cart',
+                        style: TextStyle(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
               icon: Icon(
