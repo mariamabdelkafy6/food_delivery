@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_delivery/screens/onBoarding/logo_screen.dart';
+import 'package:food_delivery/widgets/navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: LogoScreen(),
+          home: NavigationBarWidget(
+           
+          ),
         );
       },
     );

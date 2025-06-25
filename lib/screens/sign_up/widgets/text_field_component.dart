@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextFieldComponent extends StatelessWidget {
-  const TextFieldComponent(
-      {super.key,
-      required this.title,
-      required this.desc,
-      required this.icon,
-      this.visibilityIcon});
+  const TextFieldComponent({
+    super.key,
+    required this.title,
+    required this.icon,
+    required this.desc,
+    this.visibilityIcon,
+  });
   final String title;
-  final String desc;
+  final String? desc;
   final IconData icon;
   final IconData? visibilityIcon;
 

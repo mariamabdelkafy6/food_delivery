@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_delivery/screens/home/home_screen.dart';
 import 'package:food_delivery/widgets/button.dart';
 
 class SignupSuccessNotificationScreen extends StatelessWidget {
@@ -37,7 +38,10 @@ class SignupSuccessNotificationScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 192.h),
-              Button(title: 'Try Order'),
+              Button(
+                title: 'Try Order',
+                returnScreen: HomeScreen(),
+              ),
               SizedBox(height: 60.h),
             ],
           ),
