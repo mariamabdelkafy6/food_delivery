@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_delivery/screens/cart/cart_screen.dart';
+import 'package:food_delivery/screens/chat/chat_screen.dart';
 import 'package:food_delivery/screens/home/home_screen.dart';
+import 'package:food_delivery/screens/profile/profile_screen.dart';
 
 class NavigationBarWidget extends StatefulWidget {
   const NavigationBarWidget({super.key});
@@ -166,9 +169,9 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
                       ),
                       SizedBox(width: 7),
                       Text(
-                        'Message',
+                        'Chat',
                         style: TextStyle(
-                          fontSize: 8.sp,
+                          fontSize: 12.sp,
                           fontWeight: FontWeight.w600,
                         ),
                       )
@@ -191,6 +194,9 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
           index: _selectedIndex,
           children: <Widget>[
             HomeScreen(),
+            ProfileScreen(),
+            CartScreen(),
+            ChatScreen(),
           ],
         ),
       ),
