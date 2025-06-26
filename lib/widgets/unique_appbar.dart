@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery/screens/home/widgets/text_field.dart';
+import 'package:food_delivery/screens/notification/notification_screen.dart';
 
 class UniqueAppBar extends StatelessWidget {
   const UniqueAppBar({
@@ -28,27 +29,37 @@ class UniqueAppBar extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
                 color: Colors.white,
               ),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  Icon(
-                    Icons.notifications_none_outlined,
-                    size: 25.sp,
-                    color: Color(0xff15BE77),
-                  ),
-                  Positioned(
-                    top: 12,
-                    right: 19,
-                    child: Container(
-                      width: 8.w,
-                      height: 8.h,
-                      decoration: BoxDecoration(
-                        color: Colors.red,
-                        shape: BoxShape.circle,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => NotificationScreen(),
+                    ),
+                  );
+                },
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Icon(
+                      Icons.notifications_none_outlined,
+                      size: 25.sp,
+                      color: Color(0xff15BE77),
+                    ),
+                    Positioned(
+                      top: 12,
+                      right: 19,
+                      child: Container(
+                        width: 8.w,
+                        height: 8.h,
+                        decoration: BoxDecoration(
+                          color: Colors.red,
+                          shape: BoxShape.circle,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],
