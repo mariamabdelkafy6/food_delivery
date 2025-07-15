@@ -83,7 +83,7 @@ class ConfirmOrderScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w300,
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                       SizedBox(height: 14.h),
@@ -103,7 +103,7 @@ class ConfirmOrderScreen extends StatelessWidget {
                             ),
                           )
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
