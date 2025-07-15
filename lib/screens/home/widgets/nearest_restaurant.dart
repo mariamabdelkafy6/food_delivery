@@ -18,7 +18,7 @@ class NearestRestaurant extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsetsDirectional.symmetric(
             horizontal: 21,
-            vertical: 18,
+            vertical: 10,
           ),
           child: Column(
             children: [

@@ -8,7 +8,7 @@ class TextFieldWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 267.w,
       height: 50.h,
       child: TextField(

@@ -10,6 +10,7 @@ class LogoScreen extends StatefulWidget {
 }
 
 class _LogoScreenState extends State<LogoScreen> {
+  @override
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 1), () {

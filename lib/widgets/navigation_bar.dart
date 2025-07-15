@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_delivery/screens/cart/cart_screen.dart';
 import 'package:food_delivery/screens/chat/chat_screen.dart';
 import 'package:food_delivery/screens/home/home_screen.dart';
+import 'package:food_delivery/screens/order_details/order_details.dart';
 import 'package:food_delivery/screens/profile/profile_screen.dart';
 
 class NavigationBarWidget extends StatefulWidget {
@@ -195,7 +195,7 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
           children: <Widget>[
             HomeScreen(),
             ProfileScreen(),
-            CartScreen(),
+            OrderDetails(),
             ChatScreen(),
           ],
         ),

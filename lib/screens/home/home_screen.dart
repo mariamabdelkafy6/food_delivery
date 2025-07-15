@@ -12,22 +12,29 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool showPopularRestaurant = false;
+  int currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsetsDirectional.only(
-          start: 20,
-          end: 15,
-          top: 20,
-        ),
-        child: showPopularRestaurant
-            ? _buildDetailsContent()
-            : _buildMainContent(),
-      ),
+          padding: const EdgeInsetsDirectional.only(
+            start: 20,
+            end: 15,
+            top: 20,
+          ),
+          child: _buildContent()),
     );
+  }
+
+  Widget _buildContent() {
+    if (currentPage == 0) {
+      return _buildMainContent();
+    } else if (currentPage == 1) {
+      return _buildDetailsContent();
+    } else {
+      return _popularMenuContent();
+    }
   }
 
   Widget _buildMainContent() {
@@ -55,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    showPopularRestaurant = true;
+                    currentPage = 1;
                   });
                 },
                 child: Text(
@@ -91,11 +98,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(
-                'View More',
-                style: TextStyle(
-                  fontSize: 12.sp,
-                  color: Color(0xffFF7C32),
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    currentPage = 2;
+                  });
+                },
+                child: Text(
+                  'View More',
+                  style: TextStyle(
+                    fontSize: 12.sp,
+                    color: Color(0xffFF7C32),
+                  ),
                 ),
               ),
             ],
@@ -137,6 +151,29 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _popularMenuContent() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        UniqueAppBar(),
+        SizedBox(height: 20.h),
+        Text(
+          'Popular Menu',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 15.sp,
+          ),
+        ),
+        SizedBox(height: 20.h),
+        PopularMenu(),
+        SizedBox(height: 20.h),
+        PopularMenu(),
+        SizedBox(height: 20.h),
+        PopularMenu(),
+      ],
     );
   }
 }
