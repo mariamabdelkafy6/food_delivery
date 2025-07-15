@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery/screens/check_out/check_out_screen.dart';
+import 'package:food_delivery/screens/edit_location/edit_location_screen.dart';
+import 'package:food_delivery/screens/edit_payment/edit_payment_screen.dart';
 import 'package:food_delivery/widgets/details_of_price.dart';
 
 class ConfirmOrderScreen extends StatelessWidget {
@@ -64,12 +66,22 @@ class ConfirmOrderScreen extends StatelessWidget {
                               fontWeight: FontWeight.w300,
                             ),
                           ),
-                          Text(
-                            'Edit',
-                            style: TextStyle(
-                              fontSize: 14.sp,
-                              color: Color(0xff15BE77),
-                              fontWeight: FontWeight.w300,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EditPaymentScreen(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Edit',
+                              style: TextStyle(
+                                fontSize: 14.sp,
+                                color: Color(0xff15BE77),
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                           )
                         ],
@@ -122,12 +134,22 @@ class ConfirmOrderScreen extends StatelessWidget {
                               fontWeight: FontWeight.w300,
                             ),
                           ),
-                          Text(
-                            'Edit',
-                            style: TextStyle(
-                              fontSize: 14.sp,
-                              color: Color(0xff15BE77),
-                              fontWeight: FontWeight.w300,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EditLocationScreen(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Edit',
+                              style: TextStyle(
+                                fontSize: 14.sp,
+                                color: Color(0xff15BE77),
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                           )
                         ],
