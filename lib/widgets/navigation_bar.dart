@@ -32,6 +32,16 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
             setState(() {
               _selectedIndex = index;
             });
+            if (index == 1) {
+              Future.delayed(Duration.zero, () {
+                showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
+                  backgroundColor: Colors.transparent,
+                  builder: (context) => const CustomDraggableScrollableSheet(),
+                );
+              });
+            }
           },
           destinations: [
             NavigationDestination(
@@ -188,17 +198,14 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
           ],
         ),
       ),
-      body: SafeArea(
-        top: false,
-        child: IndexedStack(
-          index: _selectedIndex,
-          children: <Widget>[
-            HomeScreen(),
-            ProfileScreen(),
-            CartScreen(),
-            ChatScreen(),
-          ],
-        ),
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: <Widget>[
+          HomeScreen(),
+          ProfileScreen(),
+          CartScreen(),
+          ChatScreen(),
+        ],
       ),
     );
   }
