@@ -155,25 +155,27 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _popularMenuContent() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        UniqueAppBar(),
-        SizedBox(height: 20.h),
-        Text(
-          'Popular Menu',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 15.sp,
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          UniqueAppBar(),
+          SizedBox(height: 20.h),
+          Text(
+            'Popular Menu',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 15.sp,
+            ),
           ),
-        ),
-        SizedBox(height: 20.h),
-        PopularMenu(),
-        SizedBox(height: 20.h),
-        PopularMenu(),
-        SizedBox(height: 20.h),
-        PopularMenu(),
-      ],
+          SizedBox(height: 20.h),
+          PopularMenu(),
+          SizedBox(height: 20.h),
+          PopularMenu(),
+          SizedBox(height: 20.h),
+          PopularMenu(),
+        ],
+      ),
     );
   }
 }

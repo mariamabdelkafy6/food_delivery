@@ -11,14 +11,11 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            width: 375.w,
+          Image.network(
+            'https://i.postimg.cc/wxf63CwB/Photo.png',
+            width: 400.w,
             height: 320.h,
-            decoration: BoxDecoration(),
-            child: Image.network(
-              'https://i.postimg.cc/wxf63CwB/Photo.png',
-              fit: BoxFit.fitWidth,
-            ),
+            fit: BoxFit.fitWidth,
           ),
           SizedBox(height: 30.h),
           ElevatedButton(
