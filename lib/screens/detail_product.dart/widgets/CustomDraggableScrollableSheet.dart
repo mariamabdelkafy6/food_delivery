@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery/screens/detail_product.dart/widgets/popular_product_widget.dart';
-import 'package:food_delivery/screens/detail_product.dart/widgets/testimonials_component_widget.dart';
+import 'package:food_delivery/widgets/testimonials_component_widget.dart';
 
 class CustomDraggableScrollableSheet extends StatelessWidget {
   const CustomDraggableScrollableSheet({super.key});
