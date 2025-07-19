@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_delivery/screens/detail_product.dart/detail_product.dart';
+import 'package:food_delivery/screens/detail_product.dart/detail_product_screen.dart';
 
 class PopularMenu extends StatelessWidget {
   const PopularMenu({super.key});
