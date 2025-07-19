@@ -4,6 +4,7 @@ import 'package:food_delivery/screens/chat/chat_screen.dart';
 import 'package:food_delivery/screens/home/home_screen.dart';
 import 'package:food_delivery/screens/cart/cart_screen.dart';
 import 'package:food_delivery/screens/profile/profile_screen.dart';
+import 'package:food_delivery/screens/profile/widgets/custom_profile_details_draggable_scrollable_sheet.dart';
 
 class NavigationBarWidget extends StatefulWidget {
   const NavigationBarWidget({super.key});
@@ -38,7 +39,8 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
                   context: context,
                   isScrollControlled: true,
                   backgroundColor: Colors.transparent,
-                  builder: (context) => const CustomDraggableScrollableSheet(),
+                  builder: (context) =>
+                      const CustomProfileDetailsDraggableScrollableSheet(),
                 );
               });
             }
