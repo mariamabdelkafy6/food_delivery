@@ -9,6 +9,7 @@ class DetailProduct extends StatefulWidget {
 }
 
 class _DetailProductState extends State<DetailProduct> {
+  @override
   void initState() {
     super.initState();
     // Wait for the first frame to show modal

@@ -9,6 +9,7 @@ class DetailMenuScreen extends StatefulWidget {
 }
 
 class _DetailMenuScreenState extends State<DetailMenuScreen> {
+  @override
   void initState() {
     super.initState();
     // Wait for the first frame to show modal

@@ -1,13 +1,101 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_delivery/models/auth.dart';
 import 'package:food_delivery/screens/forgot_password/forgot_password_screen.dart';
+import 'package:food_delivery/screens/home/home_screen.dart';
 import 'package:food_delivery/screens/log_in/widgets/link_container.dart';
 import 'package:food_delivery/widgets/button.dart';
 import 'package:food_delivery/widgets/logo_component.dart';
 import 'package:food_delivery/widgets/simple_text_field.dart';
 
-class LogInScreen extends StatelessWidget {
+class LogInScreen extends StatefulWidget {
   const LogInScreen({super.key});
+
+  @override
+  State<LogInScreen> createState() => _LogInScreenState();
+}
+
+class _LogInScreenState extends State<LogInScreen> {
+  String? errorMessage = "";
+
+  bool isLogin = true;
+
+  final TextEditingController _controllerEmail = TextEditingController();
+
+  final TextEditingController _controllerPassword = TextEditingController();
+
+  Future<void> signInWithEmailAndPassword() async {
+    try {
+      await Auth().signInWithEmailAndPassword(
+          email: _controllerEmail.text, password: _controllerPassword.text);
+    } on FirebaseAuthException catch (e) {
+      setState(
+        () {
+          errorMessage = e.message;
+        },
+      );
+    }
+  }
+
+  Future<void> createUserWithEmailAndPassword() async {
+    try {
+      await Auth().createUserWithEmailAndPassword(
+        email: _controllerEmail.text,
+        password: _controllerPassword.text,
+      );
+    } on FirebaseAuthException catch (e) {
+      setState(
+        () {
+          errorMessage = e.message;
+        },
+      );
+    }
+  }
+
+  Widget _errorMessage() {
+    return Text(errorMessage == '' ? '' : "Humm ? $errorMessage");
+  }
+
+  Widget _submitButton() {
+    return SizedBox(
+      height: 57.h,
+      width: 157.w,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Color(0xff15BE77),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+              15.sp,
+            ),
+          ),
+        ),
+        onPressed: isLogin
+            ? signInWithEmailAndPassword
+            : createUserWithEmailAndPassword,
+        child: Text(
+          isLogin ? 'Login' : 'Register',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 16.sp,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _loginOrRegisterButton() {
+    return TextButton(
+      onPressed: () {
+        setState(
+          () {
+            isLogin = !isLogin;
+          },
+        );
+      },
+      child: Text(isLogin ? 'Register instead' : 'Login instead'),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +126,7 @@ class LogInScreen extends StatelessWidget {
                   desc: 'Enter Your Password',
                   title: 'Password',
                 ),
+                _errorMessage(),
                 SizedBox(height: 20.h),
                 Text(
                   'Or Continue With',
@@ -84,10 +173,8 @@ class LogInScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 36.h),
-                Button(
-                  title: 'Login',
-                  returnScreen: null,
-                ),
+                _submitButton(),
+                _loginOrRegisterButton(),
                 SizedBox(height: 36.h),
               ],
             ),
