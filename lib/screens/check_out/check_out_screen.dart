@@ -1,0 +1,144 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_delivery/widgets/unique_appbar.dart';
+
+class CheckOutScreen extends StatelessWidget {
+  const CheckOutScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsetsDirectional.symmetric(
+          horizontal: 20,
+          vertical: 20,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              UniqueAppBar(),
+              SizedBox(height: 15.h),
+              _ActiveContainer(),
+              SizedBox(height: 20.h),
+              _ActiveContainer(),
+              SizedBox(height: 20.h),
+              _ActiveContainer(),
+              SizedBox(height: 20.h),
+              Container(
+                width: 325.w,
+                height: 57.h,
+                decoration: BoxDecoration(
+                  color: Color(0xff15BE77),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Center(
+                    child: Text(
+                  'Check out',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14.sp,
+                  ),
+                )),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ignore: must_be_immutable
+class _ActiveContainer extends StatelessWidget {
+  _ActiveContainer();
+  bool isEnabled = true;
+
+  @override
+  Widget build(BuildContext context) {
+    return Opacity(
+      opacity: isEnabled ? 1.0 : 0.5,
+      child: IgnorePointer(
+        ignoring: !isEnabled,
+        child: Container(
+          width: 347.w,
+          height: 125.h,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(22),
+            color: Colors.white,
+          ),
+          child: Padding(
+            padding: const EdgeInsetsDirectional.symmetric(
+              horizontal: 14,
+            ),
+            child: Row(
+              children: [
+                ColorFiltered(
+                  colorFilter: isEnabled
+                      ? ColorFilter.mode(Colors.transparent, BlendMode.multiply)
+                      : ColorFilter.mode(Colors.grey, BlendMode.saturation),
+                  child: Image.network(
+                    'https://i.postimg.cc/8zdpMxMp/Menu-Photo.png',
+                    height: 62.h,
+                    width: 62.w,
+                  ),
+                ),
+                SizedBox(width: 18.w),
+                Padding(
+                  padding: const EdgeInsetsDirectional.symmetric(vertical: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Spicy fresh crab',
+                        style: TextStyle(
+                          fontSize: 15.sp,
+                          color: Color(0xff09051C),
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      Text(
+                        'Waroenk kita',
+                        style: TextStyle(
+                          fontSize: 14.sp,
+                          color: Color(0x8009051C),
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      Text(
+                        '\$ 35',
+                        style: TextStyle(
+                          color: isEnabled ? Color(0xff15BE77) : Colors.grey,
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 30.w),
+                Container(
+                  width: 79.w,
+                  height: 32.h,
+                  decoration: BoxDecoration(
+                    color: isEnabled ? Color(0xff15BE77) : Colors.grey,
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Process',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
