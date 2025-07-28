@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "715023156271",
+    "project_id": "my-food-delivery-2025",
+    "storage_bucket": "my-food-delivery-2025.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715023156271:android:f02fb8aa92b5ce8b30f2da",
+        "android_client_info": {
+          "package_name": "ai.innolabs.foodDelivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmVSjZKKLWFNdsZw5csk-H9wdPEf9fAQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

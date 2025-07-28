@@ -1,4 +1,4 @@
-package ai.innolabs.foodDelivery.food_delivery
+package ai.innolabs.foodDelivery
 
 import io.flutter.embedding.android.FlutterActivity
 
